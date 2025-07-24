@@ -250,3 +250,21 @@ if let name = saket.name{
 }
 print("\n")
 saket.speakDetails()
+
+// <-- Using the 4th method (force unwrap) because I am lazy --> \\
+
+class IosDeveloper: Developer {
+    var framework: String?
+    
+    init(name: String, Role: String, Experience: Int, framework: String){
+        self.framework = framework
+        super.init(name: name, Role: Role, Experience: Experience)
+    }
+    override func speakDetails() {
+        super.speakDetails()
+        print(self.framework!)
+    }
+}
+print("\n")
+let saket1 = IosDeveloper(name: "Saket", Role: "PolyMath", Experience: 5, framework: "SwiftUI")
+saket1.speakDetails()
