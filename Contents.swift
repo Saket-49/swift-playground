@@ -268,3 +268,45 @@ class IosDeveloper: Developer {
 print("\n")
 let saket1 = IosDeveloper(name: "Saket", Role: "PolyMath", Experience: 5, framework: "SwiftUI")
 saket1.speakDetails()
+
+// <-- Inheritence --> \\
+
+var n3rddev = saket1;
+n3rddev.name = "n3rddev";
+
+saket1.name  // here the output is "n3rddev"
+
+// This signifies that " var = n3rddev " is a reference type that means any changes that occurs to the n3rddev variable will be reflected on the " let saket1 " variable
+
+// <-- Understanding Reference Type --> \\
+
+struct School {
+    var name: String;
+    var location: String;
+    var classesTill: Int;
+}
+
+var Ryan = School(name:"Ryan International School", location: "Patiala", classesTill: 12);
+print(Ryan.location)
+print(Ryan.name)
+print(Ryan.classesTill)
+
+// <-- Structs --> \\
+
+var GovtSchool = Ryan;
+GovtSchool.location = "New Delhi";
+
+print(GovtSchool.location)
+print(Ryan.location)
+
+// <-- Understanding Value type --> \\
+
+
+extension String{
+    func removeWhiteSpaves() -> String{
+        return components(separatedBy: .whitespaces).joined();
+    }
+}
+let alphabet = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
+print(alphabet.removeWhiteSpaves())
+
