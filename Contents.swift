@@ -334,3 +334,43 @@ for (key, value) in dict {
 //dict.isEmpty             // Bool
 //dict.keys                // All keys
 //dict.values              // All values
+
+
+var fruitSet: Set<String> = ["apple", "banana", "orange"]
+
+// Inserting elements
+fruitSet.insert("grape")
+
+// Removing elements
+fruitSet.remove("banana")
+
+// Checking membership
+fruitSet.contains("apple")
+
+// Iterating
+for fruit in fruitSet {
+    print(fruit)
+}
+
+let a: Set = [1, 2, 3]
+let b: Set = [3, 4, 5]
+
+a.union(b)          // [1, 2, 3, 4, 5]
+a.intersection(b)   // [3]
+a.subtracting(b)    // [1, 2]
+a.symmetricDifference(b) // [1, 2, 4, 5]
+
+
+fruitSet.count
+fruitSet.isEmpty
+
+
+// <-- Keypoints below --> \\
+
+// A dictionary in Swift is an unordered collection that stores associations between unique keys and their corresponding values. Each key must be unique and is used to quickly retrieve or update its paired value. Dictionaries are ideal when you need to look up values using identifiers like names, IDs, or categories. For example, you can use a dictionary to map a student’s name to their score. Swift dictionaries are type-safe, meaning both key and value types are explicitly defined, and accessing a value using a key returns an optional because the key may or may not exist.
+
+⸻
+
+
+
+// A set in Swift is an unordered collection of unique elements—it automatically removes duplicates, making it ideal for tasks that involve checking membership or maintaining distinct values. Sets are similar to arrays but without any guaranteed order or repeated items. They provide high-performance operations like union, intersection, and difference, commonly used in mathematical or logical comparisons. For instance, you can use sets to find common tags between two articles or filter out repeated items in a list.
