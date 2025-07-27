@@ -310,3 +310,27 @@ extension String{
 let alphabet = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
 print(alphabet.removeWhiteSpaves())
 
+
+var dict: [String: Int] = ["apple": 3, "banana": 5]
+
+// Accessing value
+let appleCount = dict["apple"]  // Optional(3)
+
+// Updating value
+dict["banana"] = 6
+
+// Adding new key-value pair
+dict["orange"] = 2
+
+// Removing a key
+dict.removeValue(forKey: "apple")
+
+// Iterating
+for (key, value) in dict {
+    print("\(key): \(value)")
+}
+
+//dict.count               // Number of items
+//dict.isEmpty             // Bool
+//dict.keys                // All keys
+//dict.values              // All values
